@@ -1,0 +1,112 @@
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+   background-image: url(bookingfbg.jpg);
+  background-position: center;
+  background-size: cover;
+ 
+}
+
+.container {
+  width: 850px;
+  background-color: transparent;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color:  #000000; 
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-top: 10px;
+  color: #333;
+}
+
+input,
+select,
+button,
+textarea {
+  margin-top: 5px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #700d57;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #069527b2;
+}
+
+#currentBooking,
+#overallBooking {
+  margin-top: 20px;
+  background-color:transparent;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+#currentBookingDetails,
+#overallBookingDetails,
+#currentBookingCost,
+#overallBookingCost {
+  margin: 5px 0;
+}
+
+#currentBookingDetails,
+#overallBookingDetails {
+  color: #5d9e03;
+}
+
+#currentBookingCost,
+#overallBookingCost {
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+#bookingSummary {
+margin-top: 30px;
+background-color: transparent;
+padding: 15px;
+border-radius: 8px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#bookingDetailsTable {
+width: 100%;
+border-collapse: collapse;
+margin-top: 10px;
+}
+
+#bookingDetailsTable td {
+padding: 8px;
+border: 1px solid #ccc;
+text-align: left;
+}
+

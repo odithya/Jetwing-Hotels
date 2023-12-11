@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bookingForm</title>
+    <link rel="stylesheet" href="style2.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./site.webmanifest">
+    <link rel="mask-icon" href="./safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+     <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+
+
+    
+
+    
+
+    <section class="container">
+        <h1>JetWing Hotels</h1>
+
+
+        
+        <form id="bookingForm">
+
+           
+
+      <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName">
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName">
+
+
+        <!--arrival date& departure-->
+        <br><br><label for="duration">Duration of Stay (in days):</label>
+        <input type="number" id="duration" min="1" required>
+
+            <br><label for="roomType">Room Type:</label>
+      <select id="roomType" required>
+        <option value="single">Single</option>
+        <option value="double">Double</option>
+        <option value="triple">Triple</option>
+      </select>
+
+
+      <br><br><label for="wifi">WiFi:</label>
+      <input type="checkbox" id="wifi">
+
+      <br><label for="view">View (Pool/Garden):</label>
+      <select id="view">
+        <option value="pool">Pool View</option>
+        <option value="garden">Garden View</option>
+        </select>
+   
+      <br><br><label for="numberofAdults">Number of Adults:</label>
+      <input type="number" id="numberofAdults" min="1" required>
+
+      <br><br><label for="numberofChildren">Number of Children:</label>
+      <input type="number" id="numberofChildren" min="0" required>
+
+      </select>
+
+      <br><br><br><label for="adventure">Book Adventure:</label>
+      <select id="adventure">
+        <option value="divingLocalAdult">Diving for Local Adults</option>
+        <option value="divingLocalKids">Diving for Local Kids</option>
+        <option value="divingForeignAdult">Diving for Foreign Adults</option>
+        <option value="divingForeignKids">Diving for Foreign Kids</option>
+      </select>
+
+      <label for="guide">Need a Guide?</label>
+      <input type="checkbox" id="guide">
+
+      
+      
+      <label for="promoCode">Promo Code:</label>
+      <input type="text" id="promoCode">
+
+      <label for="loyaltyPoints">Loyalty Points:</label>
+      <input type="text" id="loyaltyPoints" readonly>
+
+      <button type="button" onclick="bookNow()">Book Now</button>
+      <button type="button" onclick="bookAdventure()">Book Adventure</button>
+
+      <button type="button" onclick="addToFavorites()">Add to Favorites</button>
+      <button type="button" onclick="checkLoyalty()">Check Loyalty</button>
+
+      
+      <div id="currentBooking">
+        <h2>Current Booking</h2>
+        <p id="currentBookingDetails"></p>
+        <p id="currentBookingCost">Cost: LKR 0.00</p>
+      </div>
+
+      <div id="overallBooking">
+        <h2>Overall Booking</h2>
+        <p id="overallBookingDetails"></p>
+        <p id="overallBookingCost">Total Cost: LKR 0.00</p>
+      </div>
+
+      <div id="bookingSummary">
+        <h2>Booking Summary</h2>
+        <table id="bookingDetailsTable">
+          <tr>
+            <td><strong>First Name:</strong></td>
+            <td id="summaryFirstName"></td>
+          </tr>
+          <tr>
+            <td><strong>Last Name:</strong></td>
+            <td id="summaryLastName"></td>
+          </tr>
+          <tr>
+            <td><strong>Duration of Stay:</strong></td>
+            <td id="summaryDuration"></td>
+          </tr>
+          <tr>
+            <td><strong>Room Type:</strong></td>
+            <td id="summaryRoomType"></td>
+          </tr>
+          <tr>
+            <td><strong>WiFi:</strong></td>
+            <td id="summaryWiFi"></td>
+          </tr>
+          <tr>
+            <td><strong>View Preference:</strong></td>
+            <td id="summaryView"></td>
+          </tr>
+          <tr>
+            <td><strong>Number of Adults:</strong></td>
+            <td id="summaryAdults"></td>
+          </tr>
+          <tr>
+            <td><strong>Number of Children:</strong></td>
+            <td id="summaryChildren"></td>
+          </tr>
+          <tr>
+            <td><strong>Book Adventure:</strong></td>
+            <td id="summaryAdventure"></td>
+          </tr>
+        </table>
+      </div>
+      
+      
+
+        </form>
+    </section>
+    
+    <script src="main.js"></script>
+</body>
+</html>
